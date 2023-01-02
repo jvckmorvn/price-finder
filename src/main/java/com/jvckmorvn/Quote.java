@@ -2,7 +2,7 @@ package com.jvckmorvn;
 
 public class Quote {
   private String website = new String();
-  private  int price;
+  private int price;
 
   public Quote(String website, int price) {
     this.website = website;

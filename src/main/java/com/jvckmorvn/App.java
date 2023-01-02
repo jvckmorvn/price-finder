@@ -1,5 +1,6 @@
 package com.jvckmorvn;
 
+import java.util.stream.Collectors;
 
 public final class App {
   public static void main(String[] args) {
@@ -7,9 +8,11 @@ public final class App {
   }
 
   public static void show() {
-    FlightService service = new FlightService();
-    service.getQuote("https://breezyjet.com/")
-            .thenAccept(System.out::println);
+    var service = new FlightService();
+    service.getQuotes()
+            .map(future -> future.thenAccept(System.out::println))
+            .collect(Collectors.toList());
+
 
     try {
       Thread.sleep(4_000);
