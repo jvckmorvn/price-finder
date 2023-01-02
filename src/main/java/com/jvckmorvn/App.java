@@ -21,7 +21,7 @@ public final class App {
                 .thenRun(() -> {
                   var end = LocalTime.now();
                   var duration = Duration.between(start, end);
-                  System.out.println("Retrieved all quotes in " + duration.toMillis() + "ms.");
+                  System.out.println("Retrieved all quotes in " + duration.toMillis() + "ms");
                 });
 
     try {
