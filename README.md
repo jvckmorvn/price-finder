@@ -6,4 +6,4 @@ This is a simulated price-fetching app built to practice more advanced Java topi
 
 - Pull the project from this public repository.
 - Navigate to the root directory of the project in the terminal.
-- Finally, run `java -jar mortgage-calculator.jar` to start the program.
+- Finally, run `java -jar price-finder.jar` to start the program.
