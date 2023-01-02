@@ -14,6 +14,7 @@ public class FlightService {
   public CompletableFuture<Quote> getQuote(String website) {
     return CompletableFuture.supplyAsync(() -> {
       System.out.println("Getting quote from " + website);
+      LongTask.simulate((int)Math.random() * 1_000);
       var price = (int)(100 * Math.random());
       return new Quote(website, price);
     });
